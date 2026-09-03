@@ -141,7 +141,7 @@ h3
 {
     /* background-color: var(--clr-heading-400);  */
     background-image: linear-gradient(hsl(39 100% 41% / .2),hsl(39 100% 41% / .2)),
-    url(/images/chess-board.jpg);
+    url(/images/chess-bg.jpg);
     background-size: cover;
     padding-block: 100px;
     padding-inline: 1rem;
