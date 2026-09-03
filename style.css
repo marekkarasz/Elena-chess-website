@@ -209,8 +209,13 @@ h3
     border-radius: 15px;
 }
 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> courses section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-
+.course
+{
+    background-image: url(/images/central-control.jpg);
+    background-size: cover;
+}
 
 
 
