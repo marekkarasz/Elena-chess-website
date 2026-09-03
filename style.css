@@ -1,0 +1,231 @@
+@font-face
+{
+    font-family: Overlock;
+    src: url(/fonts/Overlock-Regular.ttf);
+    font-weight: 400;
+}
+@font-face
+{
+    font-family: Overlock;
+    src: url(/fonts/Overlock-Bold.ttf);
+    font-weight: 700;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>     CUSTOM PROPERTIES      >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+:root
+{
+    /* >>>>>>> colors <<<<<<<<*/
+    --clr-heading-400: hsl(39 100% 41%);
+    --clr-heading-300: hsl(39 94% 57%);
+    --clr-neutral-100: hsl(0 0% 100%);
+    --clr-neutral-200: hsl(200 70% 90%);
+    --clr-neutral-800: hsl(0 0% 20%);
+    --clr-neutral-900: hsl(0 0% 0%);
+
+    /* >>>>>>> font-sizes <<<<<<<<*/
+    --fs-400: 1.155rem;
+    --fs-500: 1.3125rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2.25rem;
+    --fs-800: 3rem;
+
+    @media (width > 960px)
+    {
+        --fs-600: 2rem;
+        --fs-700: 3rem;
+        --fs-800: 4rem;
+    }
+    
+    /* >>>>>>> font-family <<<<<<<<*/
+    --ff-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --ff-display: Overlock, sans-serif;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>     BODY STYLES      >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    color: var(--clr-neutral-900);
+    font-size: var(--fs-400);
+    line-height: 1.5;
+    font-family: var(--ff-base);
+    margin: 0;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>     FONTS     <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+h1,
+h2
+{
+    color: var(--clr-heading-400);
+    line-height: 1.1;
+    font-family: var(--ff-display);
+    font-weight: 700;
+}
+h1
+{
+    span
+        {
+            color: var(--clr-neutral-900);
+            font-size: 0.75em;
+            font-weight: 400;
+            display: block;
+        }
+}
+a
+{
+    color: var(--clr-neutral-900);
+}
+
+h1
+{
+    font-size: var(--fs-800);
+}
+h2
+{
+    font-size: var(--fs-700);
+}
+h3
+{
+    font-size: var(--fs-600);
+    line-height: 1.1;
+}
+.large-text
+{
+    font-size: var(--fs-500);
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> main header <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.page-header
+{
+    background-color: var(--clr-neutral-800);
+    padding-block: 21px;
+}
+.header-content
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 21px;
+    flex-wrap: wrap;
+}
+.primary-nav ul
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 21px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.primary-nav  a
+{
+    color: var(--clr-heading-300);
+    font-weight: 700;
+    text-decoration: none;
+}
+.primary-nav a:hover,
+.primary-nav a:focus-visible
+{
+    color: var(--clr-neutral-200);
+    text-decoration: underline;
+}
+ 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> hero section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.hero
+{
+    /* background-color: var(--clr-heading-400);  */
+    background-image: linear-gradient(hsl(39 100% 41% / .2),hsl(39 100% 41% / .2)),
+    url(/images/chess-board.jpg);
+    background-size: cover;
+    padding-block: 100px;
+    padding-inline: 1rem;
+    text-align: center;
+}
+.hero-content
+{
+    background-color: hsl(39 41% 95% / .7); 
+    border-radius: 15px;
+    padding: 50px;
+}
+.hero-content > :first-child
+{
+    margin-block-start: 0;
+}
+.button
+{
+    text-decoration: none;
+    background-color: var(--clr-heading-300);
+    border-radius: 10px;
+    padding: .5em 1.5em;
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+.button:hover,
+.button:focus-visible
+{
+    background-color: var(--clr-neutral-800);
+    border: 2px solid var(--clr-heading-300);
+    color: var(--clr-heading-300);
+}
+
+
+.wrapper
+{
+    max-inline-size: 900px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> grid section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.grid-wrapper
+{
+    max-inline-size: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.grid
+{
+    display: grid;
+    gap: 1.5rem;
+
+    @media (width > 800px)
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.grid-item
+{
+    background-color: hsl(39 41% 95% / .8);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> footer section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+footer
+{
+    background-color: var(--clr-neutral-800);
+    background-image: linear-gradient(var(--clr-neutral-800), var(--clr-neutral-900));
+    text-align: center;
+    padding: 50px;
+    p{
+        color: var(--clr-neutral-100);
+    }
+}
