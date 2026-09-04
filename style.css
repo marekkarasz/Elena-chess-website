@@ -49,6 +49,12 @@
      margin: 0;
      padding: 0;
 }
+form, input, label, button
+{
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
 body
 {
     color: var(--clr-neutral-900);
@@ -221,43 +227,24 @@ h3
 {
     border-radius: 15px;
     color: var(--clr-neutral-200);
-    position: relative;
     text-align: start;
 
-    /* padding: 1rem; */
-    padding-block-start: 5rem;
-    padding-inline: 1rem;
+    padding: 1.5rem;
+    padding-block-start: 85px;
+
+    position: relative;
+
+    > img 
+    {
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
+    }
 }
-.item01
-{
-    background-image: url(/images/central-control.jpg);
-    background-size: cover;
-}
-.item02
-{
-    background-image: url(/images/fork-pin-skewer.jpg);
-    background-size: cover;
-}
-.item03
-{
-    background-image: url(/images/king-pawn-endgame.jpg);
-    background-size: cover;
-}
-.item04
-{
-    background-image: url(/images/italian-opening.jpg);
-    background-size: cover;
-}
-.item05
-{
-    background-image: url(/images/trading-pieces.jpg);
-    background-size: cover;
-}
-.item06
-{
-    background-image: url(/images/calculating.jpg);
-    background-size: cover;
-}
+
+
 .course-tag
 {
     position: absolute;
@@ -296,3 +283,22 @@ footer
         color: var(--clr-neutral-100);
     }
 }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> form page <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.form
+{
+    background-image: url(/images/chess-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+.form-content
+{
+    
+}
+
