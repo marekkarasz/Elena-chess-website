@@ -225,12 +225,12 @@ h3
 }
 .course
 {
-    border-radius: 15px;
     color: var(--clr-neutral-200);
     text-align: start;
+    z-index: 1;
 
     padding: 1.5rem;
-    padding-block-start: 85px;
+    padding-block-start: 100px;
 
     position: relative;
 
@@ -241,6 +241,7 @@ h3
         inset: 0;
         height: 100%;
         object-fit: cover;
+        border-radius: 15px;
     }
 }
 
@@ -296,9 +297,5 @@ footer
     height: 100vh;
     text-align: center;
     padding: 2rem;
-}
-.form-content
-{
-    
 }
 
