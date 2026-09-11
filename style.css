@@ -40,6 +40,12 @@
     /* >>>>>>> font-family <<<<<<<<*/
     --ff-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --ff-display: Overlock, sans-serif;
+
+    /* >>>>>>>>>>> BOX SHADOW <<<<<<<<<<<<<< */
+
+    --shadow-color: 39 41% 20%;
+    --shadow-sm: -2px 3px 6px -3px hsl(var(--shadow-color) / 0.2);
+    --shadow-lg: -5px 10px 40px -12px hsl(var(--shadow-color) / 0.18); 
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>     BODY STYLES      >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -154,13 +160,12 @@ h3
     background-size: cover;
     padding-block: 100px;
     padding-inline: 1rem;
-    text-align: center;
 }
 .hero-content
 {
     background-color: hsl(39 41% 95% / .7); 
     border-radius: 15px;
-    padding: 50px;
+    text-align: start;
 }
 .hero-content > :first-child
 {
@@ -216,7 +221,7 @@ h3
     background-color: hsl(39 41% 95% / .8); 
     padding: 20px;
     border-radius: 15px;
-    box-shadow: -5px 20px 50px -10px;
+    box-shadow: var(--shadow-sm), var(--shadow-lg);
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> courses section <<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -228,25 +233,46 @@ h3
 {
     display: grid;
     gap: 0.5rem;
+    text-align: start;
     align-content: end;
     color: var(--clr-neutral-200);
     padding: 1.5rem;
     padding-block-start: 100px;
 
+    border-radius: 15px;
     position: relative;
     isolation: isolate;
-
-    > img 
-    {
-        z-index: -1;
-        position: absolute;
-        inset: 0;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px;
-    }
 }
-
+.item01
+{
+    background-image: url(/images/central-control.jpg);
+    background-size: cover;
+}
+.item02
+{
+    background-image: url(/images/fork-pin-skewer.jpg);
+    background-size: cover;
+}
+.item03
+{
+    background-image: url(/images/king-pawn-endgame.jpg);
+    background-size: cover;
+}
+.item04
+{
+    background-image: url(/images/italian-opening.jpg);
+    background-size: cover;
+}
+.item05
+{
+    background-image: url(/images/trading-pieces.jpg);
+    background-size: cover;
+}
+.item06
+{
+    background-image: url(/images/calculating.jpg);
+    background-size: cover;
+}
 
 .course-tag
 {
@@ -310,3 +336,58 @@ footer
     padding: 2rem;
 }
 
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> about page <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+.instructor-hero
+{
+    background-image: linear-gradient(hsl(39 100% 41% / .2),hsl(39 100% 41% / .2)),
+    url(/images/chess-bg.jpg);
+    background-size: cover;
+    margin-inline: auto;
+    padding-block: 100px;
+    padding-inline: 1rem;
+}
+.instructor-hero-content
+{
+    max-inline-size: 1200px;
+    padding-inline: 2rem;
+    text-align: start;
+}
+
+.about-heading
+{
+    text-align: center;
+}
+.about
+{
+    display: grid;
+    gap: 4rem;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    margin-block-end: 4rem;
+
+    @media (width > 720px)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.card-info
+{
+    background-color: hsl(39 41% 95% / .8); 
+    padding: 20px 30px;
+    border-radius: 15px;
+    justify-items: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm), var(--shadow-lg);
+}
+.grid-2-col
+{
+    display: grid;
+    gap: 4rem;
+
+    @media (width > 720px)
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
