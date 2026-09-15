@@ -23,6 +23,10 @@
     --clr-neutral-800: hsl(0 0% 20%);
     --clr-neutral-900: hsl(0 0% 0%);
 
+    --clr-success: hsl(143, 100%, 26%);
+    --clr-warning: hsl(43, 100%, 66%);
+    --clr-error: hsl(348, 55%, 49%);
+
     /* >>>>>>> font-sizes <<<<<<<<*/
     --fs-400: 1.155rem;
     --fs-500: 1.3125rem;
@@ -166,6 +170,15 @@ h3
     background-color: hsl(39 41% 95% / .7); 
     border-radius: 15px;
     text-align: start;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    box-shadow: var(--shadow-sm), var(--shadow-lg);
+
+    @media (width > 700px)
+    {
+        padding-inline: 3rem;
+        padding-block: 2rem;
+    }
 }
 .hero-content > :first-child
 {
@@ -180,12 +193,14 @@ h3
     display: block;
     width: fit-content;
     margin-inline: auto;
+    margin-block: 1.5rem;
+    box-shadow: var(--shadow-sm), var(--shadow-lg);
 }
 .button:hover,
 .button:focus-visible
 {
     background-color: var(--clr-neutral-800);
-    border: 2px solid var(--clr-heading-300);
+    outline: 2px solid var(--clr-heading-300);
     color: var(--clr-heading-300);
 }
 
@@ -332,9 +347,57 @@ footer
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    text-align: center;
     padding: 2rem;
 }
+.contact-form
+{
+    background-color:  hsl(39 41% 95% / .8);
+    margin-inline: auto;
+    padding: 2rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1lh;
+    max-width: 60ch;
+    margin: 2rem auto;
+}
+.form-group
+{
+    display: grid;
+    text-align: start;
+    font-size: var(--fs-600);
+    gap: 0.25rem;
+    /* box-shadow: var(--shadow-sm), var(--shadow-lg); */
+}
+button
+{
+    border: none;
+}
+input,
+select
+{
+    border: none;
+    padding: 5px 10px;
+    border-radius: .5rem;
+    box-shadow: var(--shadow-sm), var(--shadow-lg);
+    font-size: inherit;
+}
+input:not([type="checkbox"]):user-valid {
+    outline: 3px solid var(--clr-success);
+  }
+  
+  input:not([type="checkbox"]):user-invalid {
+    outline: 3px solid var(--clr-error);
+  }
+
+  input:focus-visible {
+    outline: 3px solid var(--clr-warning);
+    outline-offset: 6px;
+  }
+  .form-group:has([required]) label::after {
+    content: " *" / "required";
+    color: var(--clr-error);
+  }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> about page <<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
@@ -352,7 +415,29 @@ footer
 {
     max-inline-size: 1200px;
     padding-inline: 2rem;
+    padding-block: 1.5rem;
+    margin-inline: auto;
     text-align: start;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(39 41% 95% / .7);
+    border-radius: 25px;
+    
+    @media (width > 700px)
+    {
+        padding-inline: 3rem;
+        padding-block: 2rem;
+    }
+}
+#image
+{
+    width: min(500px, 100%);
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 6px solid hsl(39 41% 95%);
 }
 
 .about-heading
